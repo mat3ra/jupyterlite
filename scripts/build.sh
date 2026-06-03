@@ -36,12 +36,14 @@ pip list
 if [[ -n ${UPDATE_CONTENT} ]]; then
     mkdir -p ${TMP_DIR} && cd ${TMP_DIR} || exit 1
     REPO_NAME="api-examples"
-    BRANCH_NAME="main"
+    BRANCH_NAME="chore/SOF-7921"
 
     # Always clone fresh to avoid stale cached state
     rm -rf "${REPO_NAME}"
     echo "Cloning ${REPO_NAME} on branch ${BRANCH_NAME}"
     git clone --branch ${BRANCH_NAME} --single-branch https://github.com/Exabyte-io/${REPO_NAME}.git || exit 1
+    # or copy with from local:
+#    cp -r "/Users/mat3ra/code/GREEN/api-examples" . || exit 1
 
     # Pull all required files
     cd ${REPO_NAME} || exit 1
@@ -65,7 +67,8 @@ if [[ -n ${UPDATE_CONTENT} ]]; then
     # Copy other required files
     cp -r ${RESOLVED_CONTENT_DIR}/{packages,utils,config.yml,README*} ${CONTENT_DIR}/
     # Update path references in README*
-    sed -i "s/examples\//api\//g" ${CONTENT_DIR}/README.*
+    perl -pi -e "s/examples\//api\//g" ${CONTENT_DIR}/README.*
+
 fi
 
 
