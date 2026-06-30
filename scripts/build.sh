@@ -41,7 +41,7 @@ if [[ -n ${UPDATE_CONTENT} ]]; then
     # Always clone fresh to avoid stale cached state
     rm -rf "${REPO_NAME}"
     echo "Cloning ${REPO_NAME} on branch ${BRANCH_NAME}"
-    git clone --branch ${BRANCH_NAME} --single-branch https://github.com/Exabyte-io/${REPO_NAME}.git || exit 1
+    git clone --branch ${BRANCH_NAME} --single-branch https://github.com/mat3ra/${REPO_NAME}.git || exit 1
     # or copy with from local:
     # cp -r "/Users/mat3ra/code/GREEN/api-examples" . || exit 1
 
