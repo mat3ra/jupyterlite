@@ -36,12 +36,12 @@ pip list
 if [[ -n ${UPDATE_CONTENT} ]]; then
     mkdir -p ${TMP_DIR} && cd ${TMP_DIR} || exit 1
     REPO_NAME="api-examples"
-    BRANCH_NAME="main"
+    BRANCH_NAME="chore/SOF-7943"
 
     # Always clone fresh to avoid stale cached state
     rm -rf "${REPO_NAME}"
     echo "Cloning ${REPO_NAME} on branch ${BRANCH_NAME}"
-    git clone --branch ${BRANCH_NAME} --single-branch https://github.com/Exabyte-io/${REPO_NAME}.git || exit 1
+    git clone --branch ${BRANCH_NAME} --single-branch https://github.com/mat3ra/${REPO_NAME}.git || exit 1
     # or copy with from local:
     # cp -r "/Users/mat3ra/code/GREEN/api-examples" . || exit 1
 
