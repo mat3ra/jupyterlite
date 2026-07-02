@@ -36,7 +36,7 @@ pip list
 if [[ -n ${UPDATE_CONTENT} ]]; then
     mkdir -p ${TMP_DIR} && cd ${TMP_DIR} || exit 1
     REPO_NAME="api-examples"
-    BRANCH_NAME="main"
+    BRANCH_NAME="feature/SOF-7948"
 
     # Always clone fresh to avoid stale cached state
     rm -rf "${REPO_NAME}"
