@@ -4,6 +4,7 @@
 
 [build.environment]
   PYTHON_VERSION = "3.10.12"
+  MISE_PYTHON_GITHUB_ATTESTATIONS = "false"
   NODE_VERSION = "18"
   INSTALL = "1"
   UPDATE_CONTENT = "1"
