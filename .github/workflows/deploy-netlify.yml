@@ -5,7 +5,7 @@ on:
 
 jobs:
   trigger-netlify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Trigger Netlify build hook
         env:
