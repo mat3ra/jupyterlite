@@ -64,6 +64,7 @@ if [[ -n ${UPDATE_CONTENT} ]]; then
     cp -r ${RESOLVED_CONTENT_DIR}/examples ${CONTENT_DIR}/api
     cp -r ${RESOLVED_CONTENT_DIR}/other/materials_designer ${CONTENT_DIR}/made
     cp -r ${RESOLVED_CONTENT_DIR}/other/experiments/jupyterlite ${CONTENT_DIR}/experiments
+    cp -r ${RESOLVED_CONTENT_DIR}/other/experiments/alchemi ${CONTENT_DIR}/experiments/alchemi
     # Copy other required files
     cp -r ${RESOLVED_CONTENT_DIR}/{packages,utils,config.yml,README*} ${CONTENT_DIR}/
     # Update path references in README*
